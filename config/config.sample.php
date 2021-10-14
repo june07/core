@@ -991,6 +991,21 @@ $CONFIG = [
   ],
 
 /**
+ * Define the jpeg preview quality
+ *
+ * The scale ranges from 1 to 100, where 1 is the lowest and 100 the highest.
+ * It defaults to -1 which is equivalent to approximately 75. More information:
+ * https://www.php.net/manual/en/function.imagejpeg.php
+ *
+ * Increasing this value ONLY results in larger responses when requesting
+ * previews. It does NOT affect the image quality or size on your local disk!
+ *
+ * NOTE: This setting also affects the files_mediaviewer app as it uses
+ * the previews for displaying images.
+ */
+'previewJPEGImageDisplayQuality' => -1,
+
+/**
  * Comments
  *
  * Global settings for the Comments infrastructure
